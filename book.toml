@@ -1,0 +1,6 @@
+[book]
+authors = ["Dave Simmons"]
+language = "en"
+multilingual = false
+src = "src"
+title = "The Laravel Book"
