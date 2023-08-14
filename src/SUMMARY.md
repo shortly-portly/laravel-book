@@ -12,4 +12,7 @@
     - [PHP Built In Webserver](./php/php-web-server.md)
     - [PHP Tags](./php/php-tags.md)
     - [Variables](./php/variables.md)
+    - [Conditionals](./php/conditionals.md)
+    - [Booleans](./php/booleans.md)
+    - [Arrays](./php/arrays.md)
   - [TODO/Questions](./misc/todo-questions.md)
