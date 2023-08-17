@@ -47,3 +47,33 @@ Functions provide several benefits, including:
 - **Readability:** Well-named functions can make your code more readable and understandable.
 
 PHP has a vast collection of built-in functions, and you can also create your own custom functions to suit your specific application needs.
+
+## Default Parameters
+In a PHP function, a default parameter (also known as a default argument) is a value that you can assign to a parameter when defining the function. If a value is not provided for that parameter when the function is called, the default value will be used instead.
+
+Default parameters are particularly useful when you want to provide a sensible or common value for a parameter while still allowing the flexibility to override that value when necessary.
+
+Here's the basic syntax for defining a function with default parameters:
+
+```php
+function myFunction($param1, $param2 = defaultValue) {
+    // Function body
+}
+```
+
+In this example, `$param2` is a parameter with a default value of `defaultValue`. If you don't provide a value for `$param2` when calling the function, it will automatically take on the value of `defaultValue`.
+
+Here's a practical example:
+
+```php
+function greet($name, $greeting = "Hello") {
+    echo "$greeting, $name!";
+}
+
+greet("Alice");         // Outputs: Hello, Alice!
+greet("Bob", "Hi");     // Outputs: Hi, Bob!
+```
+
+In the `greet()` function, the `$greeting` parameter has a default value of `"Hello"`. If you don't provide a second argument when calling the function, it will default to `"Hello"`. However, you can override the default value by passing a different value explicitly.
+
+Default parameters help make functions more flexible and user-friendly by allowing you to define sensible default behavior while still accommodating customization when needed. They are especially useful when you want to provide backward compatibility for existing code that relies on older function signatures.

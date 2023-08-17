@@ -10,7 +10,6 @@ When you run `php -S`, you're essentially starting a lightweight web server that
    ```
    This starts the server on `localhost` (your local machine) and listens on port `8000`. You can replace `8000` with any other available port number.
 
-   Accessing http://localhost:8000 will attempt to serve `index.php` and, if not found, it will serve `index.html`. If it can't find `index.html` then it will return a `404` Not Found.
 
 2. **Accessing the Application:**
    Once the server is running, you can access your PHP application by opening a web browser and navigating to `http://localhost:8000`. The server will serve the PHP files and execute them as needed.
