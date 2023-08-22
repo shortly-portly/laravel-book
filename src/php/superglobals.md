@@ -1,47 +1,36 @@
 # Superglobals
-Yes, you can pass variables to a partial when including it in PHP. This is a common practice that allows you to populate the partial with dynamic data based on the context of the page. Passing variables to partials is useful for creating reusable components that can display different content based on the values you provide.
+Superglobals in PHP are special arrays that are automatically available in all scopes of a script, meaning they can be accessed from any part of the script without the need to declare or import them explicitly. These arrays contain various types of data, such as form input data, server information, session data, and more.
 
-Here's how you can pass variables to a partial:
+PHP has several built-in superglobals, each serving a specific purpose:
 
-1. **Create the Partial File:**
-   Start by creating a partial file containing HTML and placeholders for the variables.
+1. **`$_GET`:**
+   Contains data sent to the script via HTTP GET method (query parameters in the URL).
 
-   ```php
-   <!-- partial.php -->
-   <div class="user-profile">
-       <h2><?php echo $username; ?></h2>
-       <p>Email: <?php echo $email; ?></p>
-   </div>
-   ```
+2. **`$_POST`:**
+   Holds data sent to the script via HTTP POST method (usually from forms).
 
-2. **Include the Partial with Variables:**
-   When you include the partial, make sure to define the variables before including it.
+3. **`$_REQUEST`:**
+   Combines `$_GET`, `$_POST`, and `$_COOKIE` data.
 
-   ```php
-   <!-- main.php -->
-   <!DOCTYPE html>
-   <html>
-   <head>
-       <title>User Profile</title>
-   </head>
-   <body>
-       <?php
-       $username = "JohnDoe";
-       $email = "john@example.com";
-       include 'partial.php';
-       ?>
-   </body>
-   </html>
-   ```
+4. **`$_COOKIE`:**
+   Holds data sent by the client's browser as cookies.
 
-In this example, the variables `$username` and `$email` are defined in the `main.php` file. When the `partial.php` file is included, it can access and display the values of these variables within its HTML structure.
+5. **`$_SESSION`:**
+   Contains session data that is accessible across multiple requests for a specific user.
 
-This approach allows you to reuse the same partial template for different users with different data. You can also pass arrays, objects, or any other data type as variables to a partial, depending on your needs.
+6. **`$_SERVER`:**
+   Contains server and environment information, including headers, URLs, and paths.
 
-Remember that when you include a file that uses variables, those variables are in the same scope as the including file. Therefore, they can be accessed within the included partial without any additional steps.
+7. **`$_FILES`:**
+   Holds information about uploaded files via HTTP POST method (usually from forms with file inputs).
 
-Using variables in partials adds flexibility and dynamism to your reusable components, making them adaptable to different contexts and data sources.
+8. **`$_ENV`:**
+   Holds environment variables.
 
+9. **`$GLOBALS`:**
+   Provides access to all global variables in the script's scope.
+
+These superglobals make it easy to interact with various types of data without the need to manually process inputs or access external resources. However, it's crucial to sanitize and validate data from these superglobals before using it, especially in security-sensitive operations, to prevent security vulnerabilities like SQL injection and cross-site scripting (XSS).
 ## Displaying Superglobals
 
 Using `var_dump()` with the `<pre>` tag is a common practice to improve the readability of the output. When you wrap the `var_dump()` output in a `<pre>` tag, the output will be displayed in a preformatted block, which preserves line breaks and indentation. This can make the output much more organized and easier to understand, especially when dealing with complex data structures.
