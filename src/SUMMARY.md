@@ -33,6 +33,12 @@
     - [NUll coalescing](./php/null-coalescing.md)
     - [Public Static Function](./php/static.md)
     - [filter_var](./php/filter.md)
-    - [Document Root](./php/document-root.md)
+    
+  - [Project Organisation](./php/organisation.md)
+  -   [Document Root](./php/document-root.md)
+    - [Extract](./php/extract.md)
     - [spl_autoload_register](./php/autoload.php)
+    - [namespaces](./php/namespace.md)
+    - [Access Control](./php/access.md)
+    - [Service Container](./php/service-container.md)
   - [TODO/Questions](./misc/todo-questions.md)
